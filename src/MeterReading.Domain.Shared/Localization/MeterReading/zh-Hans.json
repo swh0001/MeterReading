@@ -1,8 +1,67 @@
 {
-    "culture": "zh-Hans",
-    "texts": {
-      "Menu:Home": "首页",
-      "Welcome": "欢迎",
-      "LongWelcomeMessage": "欢迎来到该应用程序. 这是一个基于ABP框架的启动项目. 有关更多信息, 请访问 abp.io."
-    }
+  "culture": "zh-Hans",
+  "texts": {
+    "Menu:Home": "首页",
+    "Welcome": "欢迎",
+    "LongWelcomeMessage": "欢迎来到该应用程序. 这是一个基于ABP框架的启动项目. 有关更多信息, 请访问 abp.io.",
+    "Permission:MeterAccount": "MeterAccount",
+    "Permission:Create": "Create",
+    "Permission:Update": "Update",
+    "Permission:Delete": "Delete",
+    "Menu:MeterAccount": "MenuMeterAccount",
+    "Menu:MeterAccountReading": "菜单抄表账目",
+
+    "MeterAccount": "MeterAccount",
+    "MeterAccountReading": "抄表帐目",
+
+    "MeterAccountMeterName": "MeterAccountMeterName",
+    "MeterAccountReadingMeterName": "表名称",
+
+    "MeterAccountMeterLevel": "MeterAccountMeterLevel",
+    "MeterAccountFatherMeterID": "MeterAccountFatherMeterID",
+    "MeterAccountIsVirtual": "MeterAccountIsVirtual",
+    "MeterAccountSpareFor": "MeterAccountSpareFor",
+    "MeterAccountReader": "MeterAccountReader",
+    "MeterAccountReadingReader": "抄表人",
+
+    "MeterAccountUserName": "MeterAccountUserName",
+    "MeterAccountRouteNO1": "MeterAccountRouteNO1",
+    "MeterAccountRouteNO2": "MeterAccountRouteNO2",
+    "MeterAccountRouteNO3": "MeterAccountRouteNO3",
+    "MeterAccountReadingRouteNO1": "路径1",
+    "MeterAccountReadingRouteNO2": "路径2",
+    "MeterAccountReadingRouteNO3": "路径3",
+
+    "MeterAccountPlantID": "MeterAccountPlantID",
+    "MeterAccountMediaTypeID": "MeterAccountMediaTypeID",
+    "MeterAccountUserTypeID": "MeterAccountUserTypeID",
+    "MeterAccountReportCycleID": "MeterAccountReportCycleID",
+    "MeterAccountMeterID": "MeterAccountMeterID",
+    "MeterAccountReadingMeterID": "表ID",
+
+    "MeterAccountMagnification": "MeterAccountMagnification",
+    "MeterAccountPeak": "MeterAccountPeak",
+    "MeterAccountValley": "MeterAccountValley",
+    "MeterAccountFlat": "MeterAccountFlat",
+    "MeterAccountValue": "MeterAccountValue",
+    "MeterAccountReadingValue": "表底数",
+
+
+    "MeterAccountPerValue": "MeterAccountPerValue",
+    "MeterAccountDiffValue": "MeterAccountDiffValue",
+    "MeterAccountAdjustment": "MeterAccountAdjustment",
+    "MeterAccountReportValue": "MeterAccountReportValue",
+    "MeterAccountPerReportValue": "MeterAccountPerReportValue",
+    "MeterAccountDiffReportValue": "MeterAccountDiffReportValue",
+    "MeterAccountTemperature": "MeterAccountTemperature",
+    "MeterAccountPressure": "MeterAccountPressure",
+    "MeterAccountCurrentCycle": "MeterAccountCurrentCycle",
+    "MeterAccountBalanceRatio": "MeterAccountBalanceRatio",
+    "MeterAccountIsBalance": "MeterAccountIsBalance",
+    "MeterAccountIsEnable": "MeterAccountIsEnable",
+    "CreateMeterAccount": "CreateMeterAccount",
+    "EditMeterAccount": "EditMeterAccount",
+    "MeterAccountDeletionConfirmationMessage": "Are you sure to delete the meterAccount {0}?",
+    "SuccessfullyDeleted": "Successfully deleted"
   }
+}

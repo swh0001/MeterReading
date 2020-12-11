@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
+using MeterReading.Permissions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
 using MeterReading.Localization;
@@ -29,6 +30,18 @@ namespace MeterReading.Web.Menus
             var l = context.GetLocalizer<MeterReadingResource>();
 
             context.Menu.Items.Insert(0, new ApplicationMenuItem(MeterReadingMenus.Home, l["Menu:Home"], "~/"));
+            if (await context.IsGrantedAsync(MeterReadingPermissions.MeterAccount.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem(MeterReadingMenus.MeterAccount, l["Menu:MeterAccount"], "/Meters/MeterAccount")
+                );
+            }
+            if (await context.IsGrantedAsync(MeterReadingPermissions.MeterAccountReading.Default))
+            {
+                context.Menu.AddItem(
+                   new ApplicationMenuItem(MeterReadingMenus.MeterAccountReading, l["Menu:MeterAccountReading"], "/Meters/MeterAccountReading")
+               );
+            }
         }
     }
 }

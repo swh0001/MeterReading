@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using MeterReading.Users;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.Identity;
 using Volo.Abp.Users.EntityFrameworkCore;
+using MeterReading.Meters;
 
 namespace MeterReading.EntityFrameworkCore
 {
@@ -25,6 +26,7 @@ namespace MeterReading.EntityFrameworkCore
         /* Add DbSet properties for your Aggregate Roots / Entities here.
          * Also map them inside MeterReadingDbContextModelCreatingExtensions.ConfigureMeterReading
          */
+        public DbSet<MeterAccount> MeterAccounts { get; set; }
 
         public MeterReadingDbContext(DbContextOptions<MeterReadingDbContext> options)
             : base(options)

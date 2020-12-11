@@ -1,4 +1,4 @@
-﻿namespace MeterReading.Web.Menus
+namespace MeterReading.Web.Menus
 {
     public class MeterReadingMenus
     {
@@ -7,5 +7,7 @@
 
         //Add your menu items here...
 
+        public const string MeterAccount = Prefix + ".MeterAccount";
+        public const string MeterAccountReading = Prefix + ".MeterAccountReading";
     }
 }

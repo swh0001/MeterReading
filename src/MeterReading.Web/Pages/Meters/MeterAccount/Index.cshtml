@@ -1,0 +1,86 @@
+@page
+@using MeterReading.Permissions
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@using MeterReading.Web.Pages.Meters.MeterAccount
+@using MeterReading.Localization
+@using MeterReading.Web.Menus
+@model IndexModel
+@inject IPageLayout PageLayout
+@inject IHtmlLocalizer<MeterReadingResource> L
+@inject IAuthorizationService Authorization
+@{
+    PageLayout.Content.Title = L["MeterAccount"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:MeterAccount"].Value);
+    PageLayout.Content.MenuItemName = MeterReadingMenus.MeterAccount;
+}
+
+@section scripts
+{
+    <abp-script src="/Pages/Meters/MeterAccount/index.js" />
+}
+@section styles
+{
+    <abp-style src="/Pages/Meters/MeterAccount/index.css"/>
+}
+
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <abp-card-title>@L["MeterAccount"]</abp-card-title>
+            </abp-column>
+            <abp-column size-md="_6" class="text-right">
+			    @if (await Authorization.IsGrantedAsync(MeterReadingPermissions.MeterAccount.Create))
+                {
+                <abp-button id="NewMeterAccountButton"
+                            text="@L["CreateMeterAccount"].Value"
+                            icon="plus"
+                            button-type="Primary" />
+                }
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="MeterAccountTable" class="nowrap">
+            <thead>
+            <tr>
+                <th>@L["Actions"]</th>
+                <th>@L["MeterAccountMeterName"]</th>
+                <th>@L["MeterAccountMeterLevel"]</th>
+                <th>@L["MeterAccountFatherMeterID"]</th>
+                <th>@L["MeterAccountIsVirtual"]</th>
+                <th>@L["MeterAccountSpareFor"]</th>
+                <th>@L["MeterAccountReader"]</th>
+                <th>@L["MeterAccountUserName"]</th>
+                <th>@L["MeterAccountRouteNO1"]</th>
+                <th>@L["MeterAccountRouteNO2"]</th>
+                <th>@L["MeterAccountRouteNO3"]</th>
+                <th>@L["MeterAccountPlantID"]</th>
+                <th>@L["MeterAccountMediaTypeID"]</th>
+                <th>@L["MeterAccountUserTypeID"]</th>
+                <th>@L["MeterAccountReportCycleID"]</th>
+                <th>@L["MeterAccountMeterID"]</th>
+                <th>@L["MeterAccountMagnification"]</th>
+                <th>@L["MeterAccountPeak"]</th>
+                <th>@L["MeterAccountValley"]</th>
+                <th>@L["MeterAccountFlat"]</th>
+                <th>@L["MeterAccountValue"]</th>
+                <th>@L["MeterAccountPerValue"]</th>
+                <th>@L["MeterAccountDiffValue"]</th>
+                <th>@L["MeterAccountAdjustment"]</th>
+                <th>@L["MeterAccountReportValue"]</th>
+                <th>@L["MeterAccountPerReportValue"]</th>
+                <th>@L["MeterAccountDiffReportValue"]</th>
+                <th>@L["MeterAccountTemperature"]</th>
+                <th>@L["MeterAccountPressure"]</th>
+                <th>@L["MeterAccountCurrentCycle"]</th>
+                <th>@L["MeterAccountBalanceRatio"]</th>
+                <th>@L["MeterAccountIsBalance"]</th>
+                <th>@L["MeterAccountIsEnable"]</th>
+            </tr>
+            </thead>
+        </abp-table>
+    </abp-card-body>
+</abp-card>
